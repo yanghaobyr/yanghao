@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 import com.swetake.util.Qrcode;
 
 public class CreateQRCode {
-
+    
 	 public static void main(String[] args) throws Exception{  
 	       Qrcode qrcode = new Qrcode();  
 	       qrcode.setQrcodeErrorCorrect('M');//纠错等级（分为L、M、H三个等级）  
