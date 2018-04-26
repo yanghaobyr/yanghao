@@ -115,7 +115,7 @@ public class sss{
 
 public  class sss {
 	public static void main (String[] args) throws Exception{
-		
+		  
 		double   fyh   =   111231.5585;  
 		BigDecimal  byh =   new   BigDecimal(fyh);  
 		double   f1yh   =   byh.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();  
