@@ -20,6 +20,7 @@ import java.util.Set;
 import com.fh.util.DateUtil;
 
 public class sss {
+//双击666
 	public static void main(String[]args)throws Exception {
 		int[] arr = {2,9,6,7,4,1} ;
 		printArray(arr);
