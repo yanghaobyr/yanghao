@@ -3,10 +3,12 @@ import java.math.BigInteger;
 import java.math.RoundingMode;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.sql.Array;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -116,7 +118,45 @@ public class sss{
 
 public  class sss {
 	public static void main (String[] args) throws Exception{
-//来吧 老铁		  
+//来吧 老铁	
+		String ay []={"timo","kainan","naer","lanbo"};
+		//数组转换成list
+		List<String> listy=Arrays.asList(ay);
+		if(listy.contains("timo")){
+		System.out.println("有提莫");
+		}else{
+		System.out.println("没有提莫");
+		}
+		System.err.println("--------------------------------------------------------------");
+		
+		Date date2233 = new SimpleDateFormat("yyyy-MM-dd").parse("2005-06-09");
+		String now2233 = new SimpleDateFormat("yyyy-MM-dd").format(date2233);
+		System.out.println(now2233);
+		System.err.println("--------------------------------------------------------------");
+		int[] asb = {1,2,3,4,5,6,7,33,34,35};
+		//int pos = Array.IndexOf(a,4);
+		for(int i = 0;i<asb.length;i++){
+			if(0==asb[i]){
+				System.out.println("ssss");
+			}else{
+				System.out.println("meiyou");
+			}
+		}
+		 int wwwe=Arrays.binarySearch(asb, 3);
+		    if(wwwe>0){
+		    	System.out.println("you ");
+		    }
+		    
+		
+		System.err.println("--------------------------------------------------------------");
+		String laotie= "12345--6-1";
+		String laotie1 =laotie.replace("-", "");
+		System.out.println(laotie1);
+		String laotie2= laotie1.substring(laotie1.length()-4,laotie1.length());
+		System.out.println(laotie2);
+		System.err.println("--------------------------------------------------------------");
+		
+		System.out.println(new Date().getTime()+"ssssss");
 		double   fyh   =   111231.5585;  
 		BigDecimal  byh =   new   BigDecimal(fyh);  
 		double   f1yh   =   byh.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();  
@@ -370,7 +410,11 @@ System.out.println(time);
 		     String month=String.valueOf(calendar22.get(Calendar.MONTH)+1);
 		     String day=String.valueOf(calendar22.get(Calendar.DAY_OF_MONTH));
 		     String week=String.valueOf(calendar22.get(Calendar.DAY_OF_WEEK)-1);
-		     System.out.println("现在时间是："+year+"年"+month+"月"+day+"日，星期"+week);
+		     String hour=String.valueOf(calendar22.get(Calendar.HOUR_OF_DAY));//HOUR
+		     String minute=String.valueOf(calendar22.get(Calendar.MINUTE));
+		     String second=String.valueOf(calendar22.get(Calendar.SECOND));
+
+		     System.out.println("现在时间是："+year+"年"+month+"月"+day+"日，星期"+week+"--"+hour+"点"+minute+"分"+second+"秒");
 		     long now=calendar22.getTimeInMillis();
 		     calendar22.set(1994,6,7);//这里与真实的月份之间相差1
 		     long year1994=calendar22.getTimeInMillis();
